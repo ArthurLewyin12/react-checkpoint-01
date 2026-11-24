@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# React Checkpoint 01
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my React Checkpoint 01 (Front End Development - React JS Fundamentals). It's a product card for a pair of headphones, made with small React components, JSX and react-bootstrap.
 
-## Available Scripts
+## Files
 
-In the project directory, you can run:
+- `src/product.js`: the product object (name, price, description and image path), exported with `export default`
+- `src/Name.js`, `src/Price.js`, `src/Description.js`, `src/Image.js`: one component for each piece of information. Each one imports the product object and returns its part.
+- `src/App.js`: the root component, which puts the four components together in a react-bootstrap `Card`
+- `src/App.css`: my styling
+- `public/images/`: the product image and the smiley shown next to the greeting
 
-### `npm start`
+## The greeting
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Above the `App` component there is a variable:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```js
+const firstName = "Cedric";
+```
 
-### `npm test`
+Below the card, the app shows "Hello, Cedric". If the variable is empty (`""`), it shows "Hello, there!" instead. The smiley image is only displayed when a first name is provided (`{firstName && <img ... />}`).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Styling
 
-### `npm run build`
+- a soft pink to blue gradient in the background
+- a card with rounded corners and a shadow that goes up a little when you hover it
+- a red "New" badge on the image
+- the price in pink next to an "Add to cart" button
+- the greeting in a white bubble under the card
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to run it
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Then open http://localhost:3000 in the browser.

@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 40px 16px;
+  background: linear-gradient(135deg, #fdf2f8 0%, #e0e7ff 100%);
 }
 
-.App-link {
-  color: #61dafb;
+.shop-title {
+  font-weight: 800;
+  color: #2d2d44;
+  margin-bottom: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-card {
+  width: 100%;
+  max-width: 360px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(45, 45, 68, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(45, 45, 68, 0.25);
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  display: block;
+}
+
+.new-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d2d44;
+  margin: 0;
+}
+
+.product-description {
+  color: #6b6b80;
+  margin: 0;
+}
+
+.card-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #c2185b;
+  margin: 0;
+}
+
+.buy-button {
+  background-color: #2d2d44;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 18px;
+}
+
+.buy-button:hover {
+  background-color: #c2185b;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(45, 45, 68, 0.1);
+}
+
+.greeting p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d2d44;
+}
+
+.greeting-image {
+  width: 40px;
+  height: 40px;
 }
